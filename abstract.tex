@@ -1,0 +1,20 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{José Antonio García Hernández}
+\title{The topological susceptibility in QCD}
+\begin{document}
+\maketitle
+
+The topological susceptibility $\chi_t$ in QCD is a key quantity in understanding the U(1) problem that explains why the $\eta'$-meson is so heavy, via the Witten-Veneziano formula.
+However, on the lattice we face two major problems. First, when approaching the continuum limit the simulation gets stuck in a topological sector (topological freezing). To circumvent this, we use the \textit{slab method}: we compute the fluctuations of the topological charge in subvolumes (slabs), which remain non-trivial even though the simulation is frozen. Second, the lattice topological charge is not is not an integer because of UV fluctuations. We implement the Gradient flow method to smooth the gauge configuration in order for the topological charge to renormalize and approach an integer value. We present results of 2-flavor QCD of the topological susceptibility and compare the computations via the slab method and the global topological charge measurement.
+
+
+La susceptibilidad topológica en QCD es una cantidad clave en el entendimiento del problema U(1), via la fórmula de Witten-Veneziano se explica el por qué el mesón $\eta'$ es tan pesado. Sin embargo, las simulaciones en la retícula enfrentan dos grandes problemas. Primero, cuando nos acercamos al límite al continuo la simulación se estanca en un sector topológico (congelamiento topológico). Para evitar esto, usamos el método "slab": medimos la carga topológica en subvolumenes de la retícula (slabs), cuya carga fluctúa incluso cuando la simulación está congelada. Segundo, la carga topológica en la retícula no es un entero debido a fluctuaciones UV. Implementamos el flujo gradiente de Wilson para suavizar la configuración y obtener una carga renormalizada que se acerque a un valor entero. Presentamos resultados de la suceptibilidad topológica en QCD con dos sabores y comparamos el método slab con las mediciones de la carga topológica global.
+
+\end{document}
