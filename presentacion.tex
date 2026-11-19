@@ -57,11 +57,37 @@ El langrangiano también tiene una simetría U(1)$_B$ relacionada a la conservac
 $$j^B_{\mu}(x) = \sum_{f}\bar{q}^{f}(x)\gamma_{\mu}q^f(x)$$
 también es conservada. A nivel cuántico se rompe explícitamente
 $$\left\langle\partial_{\mu}j_{\mu}^B(x)\right\rangle = N_gP(x),$$
-donde $N_g$ es el número de generaciones de fermiones.
+donde $N_g$ es el número de generaciones de fermiones y $P(x)$ la densidad de Chern-Pontryagin del campo SU(2)$_L$.
+\end{frame}
+
+\begin{frame}{Carga topológica}
+    Definimos a la carga topológica como la integral de la densidad de Chern-Pontryagin
+    $$Q = -\frac{1}{32\pi^2}\int d^4x \, \epsilon_{\mu\nu\rho\sigma}\text{Tr}\left[ G_{\mu\nu}(x)G_{\mu\nu}(x)\right]. $$
+    
+    Como $A_{\mu}(x)$ se anula en el infinito podemos hacer
+    $$ A_{\mu}(x) = \Omega(x)\partial_{\mu}\Omega(x)^{\dagger}, \ \ \ \Omega(x)\in \text{SU}(N). $$
+    
+\end{frame}
+
+\begin{frame}
+
+    La transformación de norma define un mapeo
+    $$ \Omega: S^3\to \text{SU}(N)$$
+    
+    estos mapeos tienen propiedades topológicas y caen en clases de equivalencia conocidas como \textit{clases de homotopía}. \\~
+    
+    Las propiedades de homotopía están descritas por el \textit{grupo de homotopía}, en este caso el relevante es
+    $$ \Pi_3[\text{SU}(N)] = \mathbb{Z}$$
+\end{frame}
+
+\begin{frame}{La susceptibilidad topológica}
+Definimos a la susceptibilidad topológica como
+$$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|x \rangle = \frac{\langle  Q^2\rangle}{V}$$
+en la teoría pura (sin quarks).
 \end{frame}
 
 \begin{frame}{El flujo gradiente de Wilson}
-Las simulaciones en la retícula estan dominadas por configuraciones que no son suaves. \\~ 
+La integral funcional está dominada por configuraciones que no son suaves. \\~ 
 
 No es directamente aplicable la definición discretizada de la carga topológica por medio de la densidad de Chern-Pontryagin.\\~
 
@@ -84,7 +110,8 @@ La versión de la retícula es
 $$\frac{d}{dt}V_{x,\mu}(t) = Z(V_{x,\mu}(t))V_{x,\mu}(t) , \ \ \  \left. {V_{x,\mu}(t)}\right|_{t = 0} = U_{x,\mu} $$
 con
 $$Z(U_{x,\mu}) = -\{U_{x,\mu}\Sigma_{x,\mu}^{\dagger}\}_{\text{TA}}$$
-donde hemos tomado la parte anti hermitiana sin traza.
+donde hemos tomado la parte anti hermitiana sin traza, y
+$$\Sigma_{x,\mu} = \sum_{\nu \neq \mu} \left[ U_{x,\nu}U_{x+\hat{\nu},\mu}U_{x+\hat{\mu},\nu}^{\dagger} + U_{x-\hat{\nu},\nu}^{\dagger}U_{x-\hat{\nu},\mu}U_{x+\hat{\mu}-\hat{\nu},\nu}\right]$$
 \end{frame}
 
 \begin{frame}
@@ -99,8 +126,17 @@ la escala $t_0$ está definida como
 $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
 \end{frame}
 
+\begin{frame}{Fijando una escala física}
+    %En las simulaciones de la retícula medimos $t_0/a^2$
+    \centering
+    \includegraphics[scale=0.3]{energytsq.pdf}
+    
+   Observamos que $t_0/a^2 \approx 1.65$. De acuerdo a la literatura $t_0 = 0.02356(36)\text{fm}^2$ por lo que podemos extraer el espaciamento físico
+    $$ a \approx 0.120\,\text{fm}. $$
+\end{frame}
+
 \begin{frame}
-    En las simulaciones de la retícula medimos $t_0/a^2$
+
 \end{frame}
 
 \begin{frame}{El método \textit{slab}}
