@@ -23,6 +23,16 @@
 %\tableofcontents
 %\end{frame}
 
+\begin{frame}{La susceptibilidad topológica $\chi_t$}
+
+¿Por qué el mesón $\eta'$ es tan pesado si este fuera un pseudo bosón de Nambu-Goldstone?\\~
+
+La fórmula de Witten-Veneziano establece que en el límite $N_c\to\infty$ y con tres sabores de quarks
+$$ \chi_t = \frac{F_{\pi}^2}{6}\left(M_{\eta'}^2+M_{\eta}^2 - 2M_{K}^2\right)\approx (0.180\,\text{GeV})^4.$$
+
+
+\end{frame}
+
 \begin{frame}{Ingredientes de una simulación}
     Espacio-tiempo euclidiano: $\eta_{\mu\nu} \to \delta_{\mu\nu}$.\\~
     
@@ -45,7 +55,7 @@ $U_{x,\mu\nu} = U_{x,\mu}U_{x+\hat{\mu},\nu}U_{x+\hat{\nu},\mu}^{\dagger}U_{x,\n
 \includegraphics[scale=0.5]{lqcd.png}
 \end{frame}
 
-\begin{frame}{Topología de SU(3)}
+\begin{frame}{Anomalía $U(1)_A$}
 Consideremos la corriente axial en QCD
 $$j^5_{\mu}(x) = \sum_{f}\bar{q}^{f}(x)\gamma_{\mu}\gamma_{5}q^f(x)$$
 donde $q^f$ es el campo de quarks de sabor $f\in\{u,d,s,c,b,t\}$. \\~
@@ -63,19 +73,19 @@ $$ P(x) = -\frac{1}{32\pi^2}\epsilon_{\mu\nu\rho\sigma}\text{Tr}\left[ G_{\mu\nu
 es la densidad de Chern-Pontryagin del campo gluónico.
 \end{frame}
 
-\begin{frame}{Corriente de número bariónico}
-El langrangiano también tiene una simetría U(1)$_B$ relacionada a la conservación del número bariónico, por lo que la corriente
-$$j^B_{\mu}(x) = \sum_{f}\bar{q}^{f}(x)\gamma_{\mu}q^f(x)$$
-también es conservada. A nivel cuántico se rompe explícitamente
-$$\left\langle\partial_{\mu}j_{\mu}^B(x)\right\rangle = N_gP(x),$$
-donde $N_g$ es el número de generaciones de fermiones y $P(x)$ la densidad de Chern-Pontryagin del campo SU(2)$_L$.
-\end{frame}
+%\begin{frame}{Corriente de número bariónico}
+%El langrangiano también tiene una simetría U(1)$_B$ relacionada a la conservación del número bariónico, por lo que la corriente
+%$$j^B_{\mu}(x) = \sum_{f}\bar{q}^{f}(x)\gamma_{\mu}q^f(x)$$
+%también es conservada. A nivel cuántico se rompe explícitamente
+%$$\left\langle\partial_{\mu}j_{\mu}^B(x)\right\rangle = N_gP(x),$$
+%donde $N_g$ es el número de generaciones de fermiones y $P(x)$ la densidad de Chern-Pontryagin del campo SU(2)$_L$.
+%\end{frame}
 
 \begin{frame}{Carga topológica}
     Definimos a la carga topológica como la integral de la densidad de Chern-Pontryagin
     $$Q = -\frac{1}{32\pi^2}\int d^4x \, \epsilon_{\mu\nu\rho\sigma}\text{Tr}\left[ G_{\mu\nu}(x)G_{\mu\nu}(x)\right]. $$
     
-    Como $A_{\mu}(x)$ se anula en el infinito podemos hacer
+    Como la acción es finita $G_{\mu\nu}(x)$ se anula en el infinito y por tanto $A_{\mu}$ tiende a norma pura
     $$ A_{\mu}(x) = \Omega(x)\partial_{\mu}\Omega(x)^{\dagger}, \ \ \ \Omega(x)\in \text{SU}(N). $$
     
 \end{frame}
@@ -88,13 +98,13 @@ donde $N_g$ es el número de generaciones de fermiones y $P(x)$ la densidad de C
     estos mapeos tienen propiedades topológicas y caen en clases de equivalencia conocidas como \textit{clases de homotopía}. \\~
     
     Las propiedades de homotopía están descritas por el \textit{grupo de homotopía}, en este caso el relevante es
-    $$ \Pi_3[\text{SU}(N)] = \mathbb{Z}$$
+    $$ \pi_3[\text{SU}(N)] = \mathbb{Z}.$$
+    La carga topológica $Q$ es el llamado \textit{winding number}.
 \end{frame}
 
-\begin{frame}{La susceptibilidad topológica}
+\begin{frame}{La susceptibilidad topológica $\chi_t$}
 Definimos a la susceptibilidad topológica como
-$$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|x \rangle = \frac{\langle  Q^2\rangle}{V}$$
-en la teoría pura (sin quarks).
+$$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|0 \rangle = \frac{\langle  Q^2\rangle}{V}.$$
 \end{frame}
 
 \begin{frame}{El flujo gradiente de Wilson}
@@ -107,7 +117,7 @@ Esto causa que la carga topológica $Q$ no sea un entero.
 
 \begin{frame}
 En el continuo, suavizamos la configuración por medio del flujo de Yang-Mills definido por las ecuaciones 
-$$ \frac{dB_{\mu}}{dt} = D_{\nu}G_{\mu\nu}, \ \ \ \left.B_{\mu}\right|_{t = 0} = A_{\mu},$$
+$$ \frac{dB_{\mu}}{dt} = D_{\nu}G_{\nu\mu}, \ \ \ \left.B_{\mu}\right|_{t = 0} = A_{\mu},$$
 $$G_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} + [B_{\mu},B_{\nu}], \ \ \ D_{\mu} = \partial_{\mu} + [B_{\mu},\cdot], $$
 donde $t$ es el parámetro del flujo, con dimensiones [masa]$^{-2}$, y $A_{\mu}$ es el campo de norma original. \\~
 
@@ -146,7 +156,15 @@ $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
     $$ a \approx 0.120\,\text{fm}. $$
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Detalles de la simulación}
+    Usamos una retícula de volumen $V=32\times 16^3$. \\~
+    
+    $\beta=5.2$, $t=1.7$, $\kappa = $.
+    
+    
+\end{frame}
+
+\begin{frame}{La carga topológica $Q$ en la retícula}
 
 \end{frame}
 
@@ -163,7 +181,7 @@ Denotamos a la carga topológica del subvolumen $xV$ como $q(x)$.
 
 \begin{frame}
 A carga $Q$ fija la probabilidad de tener carga $q(x)$ en la primera rebanada y carga $Q-q(x)$ en la segunda es 
-$$ p(q)p(Q-q) \propto  \left( -\frac{q'^2}{2\chi_t Vx(1-x)}\right),$$
+$$ p(q)p(Q-q) \propto  \exp\left( -\frac{q'^2}{2\chi_t Vx(1-x)}\right),$$
 donde $q' = q-Qx$.
 
 Concluimos que $q'$ sigue una distribución gaussiana con 
@@ -171,6 +189,7 @@ Concluimos que $q'$ sigue una distribución gaussiana con
     $$ \sigma^2_{q'} = \langle q'^2 \rangle - \langle q' \rangle^2 = \langle q^2 \rangle - Q^2x^2 =\chi_t V x(1-x).$$
 Como esto es válido para cualquier sector, también es válido con el promedio
 $$\langle q^2 - Q^2x^2\rangle =\chi_t V x(1-x).$$
+Válido aun cuando la simulación se congele en un sector topológico.
 \end{frame}
 
 \begin{frame}{$\chi_t$ en QCD con dos sabores}
@@ -181,7 +200,7 @@ $$\langle q^2 - Q^2x^2\rangle =\chi_t V x(1-x).$$
 \begin{frame}
     
     Encontramos que
-    $$ a = 0.120 \,\text{fm}, \ \ \ a^4\chi_t = 1.32\times 10^{-4}$$
+    $$ a = 0.120 \,\text{fm}, \ \ \ a^4\chi_t = 1.29\times 10^{-4}$$
     lo que implica que
     
     $$ \chi_t \approx\left(0.175 \,\text{GeV}\right)^{4}$$    
