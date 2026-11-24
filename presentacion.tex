@@ -27,9 +27,9 @@
 
 ¿Por qué el mesón $\eta'$ es tan pesado si este fuera un pseudo bosón de Nambu-Goldstone?\\~
 
-La fórmula de Witten-Veneziano establece que en el límite $N_c\to\infty$ y con tres sabores de quarks
-$$ \chi_t = \frac{F_{\pi}^2}{6}\left(M_{\eta'}^2+M_{\eta}^2 - 2M_{K}^2\right)\approx (0.180\,\text{GeV})^4.$$
-
+La fórmula de Witten-Veneziano establece que en el límite $N_c\to\infty$ y con tres sabores de quarks en el caso de norma pura
+$$ \chi_t = \frac{F_{\pi}^2}{6}\left(M_{\eta'}^2+M_{\eta}^2 - 2M_{K}^2\right)\approx (0.180\,\text{GeV})^4,$$
+con $F_{\pi} = 92 \,\text{MeV}$.
 
 \end{frame}
 
@@ -152,20 +152,24 @@ $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
     \centering
     \includegraphics[scale=0.3]{energytsq.pdf}
     
-   Observamos que $t_0/a^2 \approx 1.65$. De acuerdo a la literatura $t_0 = 0.02356(36)\text{fm}^2$ por lo que podemos extraer el espaciamento físico
+   Observamos que usando \textit{clover} $t_0/a^2 \approx 1.65$. De acuerdo a la literatura $t_0 = 0.02356(36)\text{fm}^2$ por lo que podemos extraer el espaciamento físico
     $$ a \approx 0.120\,\text{fm}. $$
 \end{frame}
 
 \begin{frame}{Detalles de la simulación}
     Usamos una retícula de volumen $V=32\times 16^3$. \\~
     
-    $\beta=5.2$, $t=1.7$, $\kappa = $.
+    Usamos 278 configuraciones de ILDG con acción de plaqueta de Wilson para el campo gluónico en la representación fundamental con dos sabores de quarks degenerados con parámetros $\beta=5.2$, $\kappa = 0.1342$, $c_{\text{SW}} =2.0171$\\~
+    
+  Estos parámetros corresponden a una masa del pion $m_{\pi} = 1.4\,\text{GeV}$. 
+    
     
     
 \end{frame}
-
+    
 \begin{frame}{La carga topológica $Q$ en la retícula}
-
+\centering
+    \includegraphics[scale=0.45]{histogramQ.pdf}
 \end{frame}
 
 \begin{frame}{El método \textit{slab}}
@@ -203,7 +207,7 @@ Válido aun cuando la simulación se congele en un sector topológico.
     $$ a = 0.120 \,\text{fm}, \ \ \ a^4\chi_t = 1.29\times 10^{-4}$$
     lo que implica que
     
-    $$ \chi_t \approx\left(0.175 \,\text{GeV}\right)^{4}$$    
+    $$ \chi_t \approx\left(0.175(2) \,\text{GeV}\right)^{4}$$    
     
 \end{frame}
 
@@ -212,5 +216,17 @@ Válido aun cuando la simulación se congele en un sector topológico.
     \includegraphics[scale=0.4]{chi_t_slab.pdf}
 \end{frame}
 
+\begin{frame}{Conclusiones}
+    El método \textit{slab} es poderoso para medir la susceptibilidad topológica incluso cuando existe ``congelamiento topológico''.\\~
+
+    Usamos el flujo gradiente para suavizar las configuraciones del campo gluónico.\\~
+    
+    Medimos la susceptibilidad topológica para QCD con dos sabores de quarks $\simeq (175(2)\,\text{MeV})^4$.\\~
+    
+    De acuerdo a la literuatura $\chi_t \simeq (190\,\text{MeV})^4$. \\~
+    
+    Estamos dentro del orden de magnitud.
+        
+\end{frame}
 
 \end{document}
