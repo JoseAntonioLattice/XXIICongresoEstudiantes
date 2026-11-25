@@ -34,11 +34,17 @@ con $F_{\pi} = 92 \,\text{MeV}$.
 \end{frame}
 
 \begin{frame}{Ingredientes de una simulación}
-    Espacio-tiempo euclidiano: $\eta_{\mu\nu} \to \delta_{\mu\nu}$.\\~
+    Espacio-tiempo euclidiano: $\eta_{\mu\nu} \to \delta_{\mu\nu}$ y $e^{iS} \to e^{-S}$.\\~
     
-    Cuantización por integral funcional. \\~
+    Cuantización por integral funcional:
     
-    Regularización de la retícula $\psi(x) \to \psi_x$.\\~
+    Teoría de campos $\to$ Física estadística. \\~
+    
+    Generamos configuraciones con simulaciones Monte Carlo y promediamos sobre ellas.\\~
+     
+    
+    Regularización de la retícula: discretizamos el espacio-tiempo en una retícula de espaciamiento $a$
+    $$\psi(x) \to \psi_x.$$
     
     Formulación compacta $A_{x,\mu}\in\mathfrak{su}(3) \to U_{x,\mu}\in\text{SU}(3).$
     
@@ -90,6 +96,8 @@ es la densidad de Chern-Pontryagin del campo gluónico.
     
 \end{frame}
 
+
+
 \begin{frame}
 
     La transformación de norma define un mapeo
@@ -99,13 +107,26 @@ es la densidad de Chern-Pontryagin del campo gluónico.
     
     Las propiedades de homotopía están descritas por el \textit{grupo de homotopía}, en este caso el relevante es
     $$ \pi_3[\text{SU}(N)] = \mathbb{Z}.$$
-    La carga topológica $Q$ es el llamado \textit{winding number}.
+    
+\end{frame}
+
+\begin{frame}
+La carga topológica $Q$ es el llamado \textit{winding number}.\\~
+
+\centering
+\includegraphics[scale=0.5]{path18.pdf}
+$$S^1 \to S^1 $$
+$$\pi_1[S^1] = \mathbb{Z}$$
+En este ejemplo $Q = 2$.
 \end{frame}
 
 \begin{frame}{La susceptibilidad topológica $\chi_t$}
 Definimos a la susceptibilidad topológica como
 $$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|0 \rangle = \frac{\langle  Q^2\rangle}{V}.$$
 \end{frame}
+
+
+
 
 \begin{frame}{El flujo gradiente de Wilson}
 La integral funcional está dominada por configuraciones que no son suaves. \\~ 
@@ -120,8 +141,6 @@ En el continuo, suavizamos la configuración por medio del flujo de Yang-Mills d
 $$ \frac{dB_{\mu}}{dt} = D_{\nu}G_{\nu\mu}, \ \ \ \left.B_{\mu}\right|_{t = 0} = A_{\mu},$$
 $$G_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} + [B_{\mu},B_{\nu}], \ \ \ D_{\mu} = \partial_{\mu} + [B_{\mu},\cdot], $$
 donde $t$ es el parámetro del flujo, con dimensiones [masa]$^{-2}$, y $A_{\mu}$ es el campo de norma original. \\~
-
-
 
 Se puede demostrar que el flujo promedia al campo de norma sobre una esfera de radio $\sqrt{8t}$.
 \end{frame}
@@ -172,15 +191,29 @@ $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
     \includegraphics[scale=0.45]{histogramQ.pdf}
 \end{frame}
 
+\begin{frame}{Congelamiento topológico}
+    En las simulaciones cuando nos acercamos al límite al continuo $a \to 0$ las configuraciones pueden congelarse en un sector topológico $Q=\text{cte.}$\\~
+    
+     Dado que el cómputo de la susceptibilidad topológica utiliza el promedio de $Q^2$ no podemos usar esta definición cuando existe congelamiento.\\~
+     
+     El método \textit{slab} hace posible el cómputo de la susceptibilidad aún cuando hay congelamiento topológico.
+\end{frame}
+
 \begin{frame}{El método \textit{slab}}
 Asumimos simetría de paridad que implica que $\langle Q \rangle = 0$.\\~
 
 La carga topológica obedece una distribución de probabilidad gaussiana
 $$ p(Q) \propto \exp\left(-\frac{Q^2}{2\chi_tV}\right), \ \ \ \chi_t = \frac{\langle Q^2 \rangle}{V}.$$
 
+\end{frame}
+
+\begin{frame}
 Dividimos a la retícula en rebanadas (\textit{slabs}) de volumen $xV$ y $(1-x)V$ donde $x\in[0,1]$. \\~
 
-Denotamos a la carga topológica del subvolumen $xV$ como $q(x)$.
+Denotamos a la carga topológica del subvolumen $xV$ como $q(x)$.\\~
+
+\centering
+\includegraphics[scale=0.8]{slabmethod.pdf}
 \end{frame}
 
 \begin{frame}
@@ -220,12 +253,12 @@ Válido aun cuando la simulación se congele en un sector topológico.
     El método \textit{slab} es poderoso para medir la susceptibilidad topológica incluso cuando existe ``congelamiento topológico''.\\~
 
     Usamos el flujo gradiente para suavizar las configuraciones del campo gluónico.\\~
+
+     El método \textit{slab} tiene un plateau en $\chi_t$ que el método directo no tiene.\\~
     
-    Medimos la susceptibilidad topológica para QCD con dos sabores de quarks $\simeq (175(2)\,\text{MeV})^4$.\\~
+   $\chi_t \simeq (175(2)\,\text{MeV})^4$ con $N_f=2$ y $m_{\pi} = 1.4\,\text{GeV}$.\\~
     
-    De acuerdo a la literuatura $\chi_t \simeq (190\,\text{MeV})^4$. \\~
-    
-    Estamos dentro del orden de magnitud.
+    Con quarks tan pesados esperamos un valor cercano a Yang-Mills puro donde $\chi_t \simeq (190\,\text{MeV})^4$.
         
 \end{frame}
 
