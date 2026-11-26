@@ -5,20 +5,48 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{tikz}
 \author{José Antonio García Hernández}
-\title{La susceptibilidad topológica en QCD}
+\title{{La susceptibilidad topológica en QCD}}
+\setbeamertemplate{footline}[frame number]
+\def\insertauthorindicator{MSc}
+\def\insertinstituteindicator{Instituto}
+\def\insertdateindicator{Fecha}
+
 %\setbeamercovered{transparent} 
 %\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
 %\institute{} 
-\date{5 de diciembre, 2026} 
+\date{5 de diciembre, 2026 \\ Congreso de estudiantes del PCF \\ Instituto de Física} 
 %\subject{} 
 \begin{document}
+%{
+%\usebackgroundtemplate{
+%        \includegraphics[width=\paperwidth, height=\paperheight]{lava.jpg}
+%    }
+%\begin{frame}
+%    \titlepage
+%\end{frame}
+%}
 
-\begin{frame}
-\titlepage
+{
+\usebackgroundtemplate{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{lava.jpg}}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[
+      fill=white, fill opacity=0.8, text opacity=1,   % caja blanca semitransparente
+      draw=blue!50!black, line width=1pt,              % borde
+      rounded corners=5pt, inner sep=12pt,
+      text width=0.75\paperwidth, align=center
+    ] at (current page.center) {
+      {\Large\bfseries\color{blue!50!black}\inserttitle}\\[10pt]
+      \insertauthor\\[4pt]
+      {\small\insertdate}
+    };
+  \end{tikzpicture}
 \end{frame}
-
+}
 %\begin{frame}
 %\tableofcontents
 %\end{frame}
@@ -142,6 +170,8 @@ $$ \frac{dB_{\mu}}{dt} = D_{\nu}G_{\nu\mu}, \ \ \ \left.B_{\mu}\right|_{t = 0} =
 $$G_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu} + [B_{\mu},B_{\nu}], \ \ \ D_{\mu} = \partial_{\mu} + [B_{\mu},\cdot], $$
 donde $t$ es el parámetro del flujo, con dimensiones [masa]$^{-2}$, y $A_{\mu}$ es el campo de norma original. \\~
 
+\textit{Es una ecuación de calor para el campo de norma.}\\~
+
 Se puede demostrar que el flujo promedia al campo de norma sobre una esfera de radio $\sqrt{8t}$.
 \end{frame}
 
@@ -172,13 +202,13 @@ $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
     \includegraphics[scale=0.3]{energytsq.pdf}
     
    Observamos que usando \textit{clover} $t_0/a^2 \approx 1.65$. De acuerdo a la literatura $t_0 = 0.02356(36)\text{fm}^2$ por lo que podemos extraer el espaciamento físico
-    $$ a \approx 0.120\,\text{fm}. $$
+    $$ a = 0.1195(9)\,\text{fm}. $$
 \end{frame}
 
 \begin{frame}{Detalles de la simulación}
     Usamos una retícula de volumen $V=32\times 16^3$. \\~
     
-    Usamos 278 configuraciones de ILDG con acción de plaqueta de Wilson para el campo gluónico en la representación fundamental con dos sabores de quarks degenerados con parámetros $\beta=5.2$, $\kappa = 0.1342$, $c_{\text{SW}} =2.0171$\\~
+    Usamos 278 configuraciones de ILDG con acción de plaqueta de Wilson para el campo gluónico en la representación fundamental con dos sabores de quarks degenerados con parámetros $\beta=5.2$, $\kappa = 0.1342$, $c_{\text{SW}} =2.0171$.\\~
     
   Estos parámetros corresponden a una masa del pion $m_{\pi} = 1.4\,\text{GeV}$. 
     
@@ -237,10 +267,11 @@ Válido aun cuando la simulación se congele en un sector topológico.
 \begin{frame}
     
     Encontramos que
-    $$ a = 0.120 \,\text{fm}, \ \ \ a^4\chi_t = 1.29\times 10^{-4}$$
+    $$ a = 0.1195(9
+    ) \,\text{fm}, \ \ \ a^4\chi_t = 1.29(7)\times 10^{-4}$$
     lo que implica que
     
-    $$ \chi_t \approx\left(0.175(2) \,\text{GeV}\right)^{4}$$    
+    $$ \chi_t \approx\left(176.0\pm 2.4^{\text{est.}}\pm 1.3^{\text{escala}} \,\text{MeV}\right)^{4} \approx \left(176(3)\,\text{MeV}\right)^{4}.$$    
     
 \end{frame}
 
@@ -256,7 +287,7 @@ Válido aun cuando la simulación se congele en un sector topológico.
 
      El método \textit{slab} tiene un plateau en $\chi_t$ que el método directo no tiene.\\~
     
-   $\chi_t \simeq (175(2)\,\text{MeV})^4$ con $N_f=2$ y $m_{\pi} = 1.4\,\text{GeV}$.\\~
+   $\chi_t \simeq (176(3)\,\text{MeV})^4$ con $N_f=2$ y $m_{\pi} = 1.4\,\text{GeV}$.\\~
     
     Con quarks tan pesados esperamos un valor cercano a Yang-Mills puro donde $\chi_t \simeq (190\,\text{MeV})^4$.
         

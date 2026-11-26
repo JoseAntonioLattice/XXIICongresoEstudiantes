@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.4798192"
-     inkscape:cx="375.04582"
-     inkscape:cy="596.69451"
+     inkscape:zoom="1.1873237"
+     inkscape:cx="357.94788"
+     inkscape:cy="912.97766"
      inkscape:window-width="1920"
      inkscape:window-height="1048"
      inkscape:window-x="1920"
@@ -253,7 +253,7 @@
        id="rect2"
        style="fill:#00ff00;fill-opacity:0.6;stroke:#000000;stroke-width:0.623001"
        d="M 60.074886 123.18938 L 28.78584 123.18938 L 28.78584 169.31835 L 60.074886 169.31835 L 60.074886 123.18938 z "
-       inkscape:export-filename="slabmethodpdf"
+       inkscape:export-filename="slabmethod.pdf"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <path
@@ -262,7 +262,7 @@
        d="M 60.074886 123.18938 L 60.074886 169.31835 L 121.04377 169.31835 L 121.04377 123.18938 L 60.074886 123.18938 z " />
     <g
        inkscape:label=""
-       transform="translate(122.47417,220.60318)"
+       transform="translate(127.59949,168.4586)"
        id="g3">
       <g
          fill="#000000"
@@ -280,7 +280,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="translate(127.30162,207.58006)"
+       transform="translate(132.42694,155.43548)"
        id="g9">
       <g
          fill="#000000"
@@ -477,7 +477,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="translate(164.66964,218.48651)"
+       transform="translate(173.80608,164.33637)"
        id="g14">
       <g
          fill="#000000"
@@ -657,5 +657,18 @@
         </g>
       </g>
     </g>
+    <circle
+       style="fill:#ff0000;fill-opacity:0.6;stroke:#000000;stroke-width:0.623001"
+       id="path18"
+       cx="55.041508"
+       cy="254.26056"
+       r="30.083416"
+       inkscape:export-filename="path18.pdf"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-opacity:0.6;stroke:#0000ff;stroke-width:0.623001"
+       d="m 46.350742,214.59502 c 0,0 46.405876,4.11439 46.405876,26.79244 0,22.67806 -2.107967,48.57571 -28.045203,48.57571 -25.937236,0 -64.73717255,6.9474 -58.6637568,-15.7189 6.0734158,-22.66629 -9.5862782,-40.83257 12.5288508,-46.7583 22.115129,-5.92573 42.172374,-27.89516 61.804589,-16.56049 19.632212,11.33466 47.723252,77.94528 20.885372,77.94528 -26.837875,0 -83.439262,34.38736 -83.439262,0 0,-34.38736 -28.969213,-66.2535 28.523534,-74.27574 z"
+       id="path19" />
   </g>
 </svg>
