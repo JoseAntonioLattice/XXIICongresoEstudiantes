@@ -17,7 +17,7 @@
 %\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
 %\institute{} 
-\date{5 de diciembre, 2026 \\ Congreso de estudiantes del PCF \\ Instituto de Física} 
+\date{5 de diciembre, 2026 \\ Congreso de estudiantes del PCF \\ Instituto de Física UNAM} 
 %\subject{} 
 \begin{document}
 %{
@@ -150,7 +150,8 @@ En este ejemplo $Q = 2$.
 
 \begin{frame}{La susceptibilidad topológica $\chi_t$}
 Definimos a la susceptibilidad topológica como
-$$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|0 \rangle = \frac{\langle  Q^2\rangle}{V}.$$
+$$ \chi_t = \int d^4x\, \langle 0|P(0)P(x)|0 \rangle = \frac{\langle  Q^2\rangle}{V},$$
+donde $V$ es el volumen del espacio-tiempo.
 \end{frame}
 
 
@@ -208,7 +209,7 @@ $$ \left.\mathcal{E}(t)\right|_{t=t_0} = 0.3.$$
 \begin{frame}{Detalles de la simulación}
     Usamos una retícula de volumen $V=32\times 16^3$. \\~
     
-    Usamos 278 configuraciones de ILDG con acción de plaqueta de Wilson para el campo gluónico en la representación fundamental con dos sabores de quarks degenerados con parámetros $\beta=5.2$, $\kappa = 0.1342$, $c_{\text{SW}} =2.0171$.\\~
+    Usamos 278 configuraciones de ILDG (colaboración QCDSF) con acción de plaqueta de Wilson para el campo gluónico en la representación fundamental con dos sabores de quarks degenerados con parámetros $\beta=5.2$, $\kappa = 0.1342$, $c_{\text{SW}} =2.0171$.\\~
     
   Estos parámetros corresponden a una masa del pion $m_{\pi} = 1.4\,\text{GeV}$. 
     
@@ -267,11 +268,13 @@ Válido aun cuando la simulación se congele en un sector topológico.
 \begin{frame}
     
     Encontramos que
-    $$ a = 0.1195(9
-    ) \,\text{fm}, \ \ \ a^4\chi_t = 1.29(7)\times 10^{-4}$$
+    $$ a = 0.1195(9) \,\text{fm}, \ \ \ a^4\chi_t = 1.29(7)\times 10^{-4}$$
     lo que implica que
     
-    $$ \chi_t \approx\left(176.0\pm 2.4^{\text{est.}}\pm 1.3^{\text{escala}} \,\text{MeV}\right)^{4} \approx \left(176(3)\,\text{MeV}\right)^{4}.$$    
+    \begin{align*} 
+    \chi_t & \approx\left(176.0\pm 2.4^{\text{est.}}\pm 1.3^{\text{escala}} \,\text{MeV}\right)^{4} \\
+    &  \approx \left(176(3)\,\text{MeV}\right)^{4}.
+    \end{align*} 
     
 \end{frame}
 
@@ -281,7 +284,7 @@ Válido aun cuando la simulación se congele en un sector topológico.
 \end{frame}
 
 \begin{frame}{Conclusiones}
-    El método \textit{slab} es poderoso para medir la susceptibilidad topológica incluso cuando existe ``congelamiento topológico''.\\~
+    El método \textit{slab} es poderoso para medir $\chi_t$ incluso cuando hay ``congelamiento topológico''.\\~
 
     Usamos el flujo gradiente para suavizar las configuraciones del campo gluónico.\\~
 
@@ -289,7 +292,9 @@ Válido aun cuando la simulación se congele en un sector topológico.
     
    $\chi_t \simeq (176(3)\,\text{MeV})^4$ con $N_f=2$ y $m_{\pi} = 1.4\,\text{GeV}$.\\~
     
-    Con quarks tan pesados esperamos un valor cercano a Yang-Mills puro donde $\chi_t \simeq (190\,\text{MeV})^4$.
+    Con quarks tan pesados esperamos un valor cercano a Yang-Mills puro donde $\chi_t \simeq (190\,\text{MeV})^4$.\\~
+    
+    Más valores de $\beta$ y quarks más ligeros en las próximas simulaciones.
         
 \end{frame}
 
